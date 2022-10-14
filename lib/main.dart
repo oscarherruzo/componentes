@@ -13,9 +13,18 @@ class MyApp extends StatelessWidget {
       
       //home: const cardScreen(),
       initialRoute: AppRoutes.initialRoute,
-      routes: AppRoutes.routes,
+      routes: AppRoutes.getAppRoutes(),
       debugShowCheckedModeBanner: false,
       onGenerateRoute: AppRoutes.onGenerateRoute,
+      theme: ThemeData.light().copyWith(
+        primaryColor: Colors.indigo,
+
+
+        appBarTheme: AppBarTheme(
+          color: Colors.red,
+          elevation: 0
+        )
+      ),
     );
   }
 }
