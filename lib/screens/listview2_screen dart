@@ -1,0 +1,30 @@
+import 'package:flutter/material.dart';
+
+
+class listview2Screen extends StatelessWidget {
+   final option = const ['Call of Duty', 'Spiderman', 'Battlefield'];
+  const listview2Screen({Key? key}) : super(key: key);
+  
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Listview Tipo 2'),
+        elevation: 0,
+        backgroundColor: Colors.indigo
+      ),
+      body: ListView.separated(
+        itemCount: option.length,
+        itemBuilder: (context, i) =>ListTile(
+          title: Text(option[i]),
+          trailing: const Icon(Icons.arrow_back_ios_outlined, color: Colors.indigo),
+          onTap: () {
+            final game = option[i];
+            print(game);
+          },
+        ),
+        separatorBuilder: (_,__)=>const Divider(), 
+      )
+    );
+  }
+}
