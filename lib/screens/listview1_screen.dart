@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 
 class listview1Screen extends StatelessWidget {
    final option = const ['Call of Duty', 'Spiderman', 'Battlefield'];
-  const listview1Screen({Key? key}) : super(key: key);
+  const listview1Screen({Key? key, required List children}) : super(key: key);
   
   @override
   Widget build(BuildContext context) {
@@ -25,7 +25,7 @@ class listview1Screen extends StatelessWidget {
         )
           
         ).toList(),
-        Divider()
+        const Divider()
         ],
       )
     );

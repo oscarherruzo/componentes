@@ -17,7 +17,7 @@ class AppRoutes {
       //TODO: borrar home
 
       menuOption(route: 'home', icon: Icons.home, name: 'Home Screen', screen: const HomeScreen()),
-      menuOption(route: 'ListView1', icon: Icons.list_alt, name: 'ListView1', screen: const listview1Screen()),
+      menuOption(route: 'ListView1', icon: Icons.list_alt, name: 'ListView1', screen: const listview1Screen(children: [],)),
       menuOption(route: 'ListView2', icon: Icons.list, name: 'ListView2', screen: const listview2Screen()),
       menuOption(route: 'Alertas', icon: Icons.add_alert_outlined, name: 'Alertas', screen: const AlertScreen()),
       menuOption(route: 'card', icon: Icons.credit_card, name: 'Cards', screen: const cardScreen()),
