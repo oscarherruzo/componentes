@@ -6,6 +6,8 @@ class CustomCardType2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      clipBehavior: Clip.antiAlias,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
       elevation: 10,
       child: Column(
         children: [
