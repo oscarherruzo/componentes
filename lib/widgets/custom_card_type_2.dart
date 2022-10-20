@@ -1,7 +1,16 @@
+import 'package:componentes/screens/screens.dart';
 import 'package:flutter/material.dart';
 
 class CustomCardType2 extends StatelessWidget {
-  const CustomCardType2({super.key});
+
+
+  final String imageUrl;
+  final String? name;
+  const CustomCardType2({super.key, required this.imageUrl, this.name});
+
+
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -9,20 +18,22 @@ class CustomCardType2 extends StatelessWidget {
       clipBehavior: Clip.antiAlias,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
       elevation: 10,
+      shadowColor: AppTheme.primary,
       child: Column(
         children: [
-          const FadeInImage(
-            image: NetworkImage('https://www.tooltyp.com/wp-content/uploads/2014/10/1900x920-8-beneficios-de-usar-imagenes-en-nuestros-sitios-web.jpg'), 
-            placeholder: AssetImage('assets/jar-loading.gif'),
+          FadeInImage(
+            image: NetworkImage(imageUrl), 
+            placeholder: const AssetImage('assets/jar-loading.gif'),
             width: double.infinity,
             height: 260,
             fit: BoxFit.contain,
-            fadeInDuration: Duration(seconds: 3),
+            fadeInDuration: const Duration(seconds: 3),
           ),
+          if(name!=null)
           Container(
             alignment: AlignmentDirectional.centerEnd,
             padding: const EdgeInsets.only(right: 20, top: 10, bottom: 10),
-            child: const Text('Un hermoso paisaje'),
+            child: Text(name ?? 'Sin titulo'),
           )
         ],
       ),

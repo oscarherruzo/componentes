@@ -19,7 +19,13 @@ class cardScreen extends StatelessWidget {
 
           CustomCardType1(),
           SizedBox(height: 10),
-          CustomCardType2(),
+          CustomCardType2(imageUrl: 'https://www.tooltyp.com/wp-content/uploads/2014/10/1900x920-8-beneficios-de-usar-imagenes-en-nuestros-sitios-web.jpg', name: 'Paisaje la hostia de bonito'),
+             CustomCardType1(),
+          SizedBox(height: 10),
+          CustomCardType2(imageUrl: 'https://www.mundo-geo.es/uploads/s1/10/48/89/47/montanas-del-arco-iris-uno-de-los-bonitos-paisajes-que-esconden-el-planeta.jpeg', name: null),
+             CustomCardType1(),
+          SizedBox(height: 10),
+          CustomCardType2(imageUrl: 'https://static1.elcorreo.com/www/multimedia/202105/13/media/MM-paisajes/capri-italia.jpg', )
 
          ]
       ),
