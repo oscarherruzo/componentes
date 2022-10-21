@@ -2,7 +2,7 @@
 
 import 'package:componentes/models/menu_option.dart';
 import 'package:flutter/material.dart';
-import 'package:componentes/models/menu_option.dart';
+
 
 
 import '../screens/screens.dart';
@@ -22,6 +22,8 @@ class AppRoutes {
       menuOption(route: 'Alertas', icon: Icons.add_alert_outlined, name: 'Alertas', screen: const AlertScreen()),
       menuOption(route: 'card', icon: Icons.credit_card, name: 'Cards', screen: const cardScreen()),
       menuOption(route: 'Avatar', icon: Icons.people, name: 'Avatar', screen: const AvatarScreen()),
+      menuOption(route: 'Animated', icon: Icons.play_circle_outline_rounded, name: 'Animated', screen: const AnimatedScreen()),
+      menuOption(route: 'Inputs', icon: Icons.input_outlined, name: 'Text Inputs', screen: const inputsScreen()),
     ];
 
 
@@ -29,6 +31,9 @@ class AppRoutes {
 
     static Map<String, Widget Function (BuildContext)> getAppRoutes(){
       Map<String, Widget Function (BuildContext)> app_routes = {};
+
+       app_routes.addAll({'home' :(BuildContext context) => const HomeScreen()});
+
 
       for (final option in menuOptions) {
         app_routes.addAll({option.route : (BuildContext context) => option.screen});

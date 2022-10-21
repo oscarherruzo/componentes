@@ -5,3 +5,6 @@ export 'package:componentes/screens/listview2_screen dart';
 export 'package:componentes/screens/home_screen.dart';
 export 'package:componentes/screens/avatar_screen.dart';
 export 'package:componentes/theme/app_theme.dart';
+export 'package:componentes/screens/animated_screen.dart';
+export 'package:componentes/screens/inputs_screen.dart';
+
